@@ -1,0 +1,1 @@
+Отправьте новое название для соединения <b><?=$connection->description;?></b> (/<?=$connection->login;?>) 

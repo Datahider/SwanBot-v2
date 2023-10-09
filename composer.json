@@ -1,0 +1,22 @@
+{
+    "name": "losthost/swan-bot-v2",
+    "description": "A Telegram bot that controlles StrongSwan VPN servers",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "drweb",
+            "email": "pio@pio.su"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "losthost\\SwanBot\\": "src/"
+        }
+    },
+    "require": {
+        "losthost/swanctl-model": "^v1.0.0",
+        "losthost/swanctl-server": "^v1.0.1",
+        "losthost/bot-view": "^v1.0.1",
+        "losthost/telle": "^v3.0.0"
+    }
+}
