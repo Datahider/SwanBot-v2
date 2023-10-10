@@ -23,6 +23,10 @@ class CallbackCancelDelete extends ConnectionHandlerCallback {
         $view->show(Env::$language_code, 'connection', 'connection-keyboard', [
             'connection' => $this->connection
         ], $callback_query->getMessage()->getMessageId());
+
+        try {
+            Bot::$api->answerCallbackQuery($callback_query->getId());
+        } catch (\Exception $e) {}
         return true;
     }
 }

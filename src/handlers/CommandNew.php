@@ -7,6 +7,7 @@ use losthost\templateHelper\Template;
 use TelegramBot\Api\Types\Message;
 use losthost\swanctlModel\Model;
 use losthost\BotView\BotView;
+use losthost\SwanBot\Sync;
 use losthost\telle\Bot;
 use losthost\telle\Env;
 /**
@@ -38,6 +39,8 @@ class CommandNew extends AbstractHandlerMessage {
         $view->show(Env::$language_code, 'connection-created', null, [
             'connection' => $new_connection
         ]);
+        
+        Bot::runAt(date_create(), Sync::class);
         
         return true;
     }

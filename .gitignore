@@ -1,3 +1,4 @@
 /vendor/
 /nbproject/
 /etc/bot_config.php
+/etc/id_rsa

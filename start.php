@@ -23,5 +23,9 @@ Bot::addHandler(losthost\SwanBot\handlers\CommandLogin::class);
 Bot::addHandler(\losthost\SwanBot\handlers\CommandCodes::class);
 Bot::addHandler(losthost\SwanBot\handlers\CommandHelp::class);
 
+$sync_cron_job = new losthost\DB\DBValue("SELECT id FROM [telle_pending_jobs] WHERE job_class = ?", losthost\SwanBot\Sync::class);
+if (!$sync_cron_job->next()) {
+    Bot::runAt('*/5 * * * *', losthost\SwanBot\Sync::class);
+}
 Bot::run();
 

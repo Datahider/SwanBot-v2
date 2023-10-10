@@ -12,6 +12,7 @@ use losthost\templateHelper\Template;
 use TelegramBot\Api\Types\Message;
 use losthost\swanctlModel\Model;
 use losthost\BotView\BotView;
+use losthost\SwanBot\Sync;
 use losthost\passg\Pass;
 use losthost\telle\Bot;
 use losthost\telle\Env;
@@ -57,6 +58,9 @@ class CommandStart extends AbstractHandlerMessage {
             'telegram_user' => Env::$user,
             'connection' => $new_connection
         ]);
+        
+        Bot::runAt(date_create(), Sync::class);
+        
     }
     
     protected function handleExistingUser(Model &$model, DBUser &$model_user) {

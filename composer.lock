@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f6f702387a8d7e5cde3daa427c5ad0ea",
+    "content-hash": "7e7bca121b81a27985a83f5876558cdf",
     "packages": [
         {
             "name": "dragonmantank/cron-expression",
@@ -110,16 +110,16 @@
         },
         {
             "name": "losthost/db",
-            "version": "v1.6.2",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Datahider/DB.git",
-                "reference": "8dbf40f73b9c914579989263cd1fca9a7775b847"
+                "reference": "93b7bb90743268a7d1c71ccb443d22182ae48c2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Datahider/DB/zipball/8dbf40f73b9c914579989263cd1fca9a7775b847",
-                "reference": "8dbf40f73b9c914579989263cd1fca9a7775b847",
+                "url": "https://api.github.com/repos/Datahider/DB/zipball/93b7bb90743268a7d1c71ccb443d22182ae48c2a",
+                "reference": "93b7bb90743268a7d1c71ccb443d22182ae48c2a",
                 "shasum": ""
             },
             "require": {
@@ -152,9 +152,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Datahider/DB/issues",
-                "source": "https://github.com/Datahider/DB/tree/v1.6.2"
+                "source": "https://github.com/Datahider/DB/tree/v2.0.0"
             },
-            "time": "2023-10-06T10:50:46+00:00"
+            "time": "2023-10-10T10:50:07+00:00"
         },
         {
             "name": "losthost/passg",
@@ -236,20 +236,20 @@
         },
         {
             "name": "losthost/swanctl-model",
-            "version": "v1.2.0",
+            "version": "v1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Datahider/Swanctl-Model.git",
-                "reference": "384baef358681f266d7329e7e93b2ade0cf8ef7a"
+                "reference": "a8e439462e46b5f0575a369726fdfc6e90e92174"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Datahider/Swanctl-Model/zipball/384baef358681f266d7329e7e93b2ade0cf8ef7a",
-                "reference": "384baef358681f266d7329e7e93b2ade0cf8ef7a",
+                "url": "https://api.github.com/repos/Datahider/Swanctl-Model/zipball/a8e439462e46b5f0575a369726fdfc6e90e92174",
+                "reference": "a8e439462e46b5f0575a369726fdfc6e90e92174",
                 "shasum": ""
             },
             "require": {
-                "losthost/db": "^1.6.2",
+                "losthost/db": "^2.0.0",
                 "losthost/passg": "^v1.1.0"
             },
             "require-dev": {
@@ -271,9 +271,9 @@
             "description": "Data model for controlling StrongSwan VPN Server(s)",
             "support": {
                 "issues": "https://github.com/Datahider/Swanctl-Model/issues",
-                "source": "https://github.com/Datahider/Swanctl-Model/tree/v1.2.0"
+                "source": "https://github.com/Datahider/Swanctl-Model/tree/v1.2.2"
             },
-            "time": "2023-10-08T18:59:37+00:00"
+            "time": "2023-10-10T18:09:54+00:00"
         },
         {
             "name": "losthost/swanctl-server",
@@ -318,21 +318,21 @@
         },
         {
             "name": "losthost/telle",
-            "version": "v3.0.4",
+            "version": "v3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Datahider/Telle.git",
-                "reference": "226b7395373e5c93d87db9f372f051e6161465d6"
+                "reference": "5796ea327dde6aef0f33572db0ed69196eac9fa7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Datahider/Telle/zipball/226b7395373e5c93d87db9f372f051e6161465d6",
-                "reference": "226b7395373e5c93d87db9f372f051e6161465d6",
+                "url": "https://api.github.com/repos/Datahider/Telle/zipball/5796ea327dde6aef0f33572db0ed69196eac9fa7",
+                "reference": "5796ea327dde6aef0f33572db0ed69196eac9fa7",
                 "shasum": ""
             },
             "require": {
                 "dragonmantank/cron-expression": "v3.3.3",
-                "losthost/db": "^1.6.2",
+                "losthost/db": "^2.0.0",
                 "php": ">=8.1.1",
                 "telegram-bot/api": "2.6.x-dev"
             },
@@ -352,9 +352,9 @@
             "description": "A simple template for extreme complex bot",
             "support": {
                 "issues": "https://github.com/Datahider/Telle/issues",
-                "source": "https://github.com/Datahider/Telle/tree/v3.0.4"
+                "source": "https://github.com/Datahider/Telle/tree/v3.1.1"
             },
-            "time": "2023-10-08T19:59:33+00:00"
+            "time": "2023-10-10T17:20:11+00:00"
         },
         {
             "name": "losthost/template-helper",

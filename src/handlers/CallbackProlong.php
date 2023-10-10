@@ -18,7 +18,10 @@ class CallbackProlong extends ConnectionHandlerCallback {
     protected function handle(CallbackQuery &$callback_query): bool {
         $view = new BotView(Bot::$api, Env::$user->id);
         $view->show(Env::$language_code, 'prolong-prompt', null, ['connection' => $this->connection]);
-        Bot::$api->answerCallbackQuery($callback_query->getId());
+
+        try {
+            Bot::$api->answerCallbackQuery($callback_query->getId());
+        } catch (\Exception $e) {}
         
         PriorityProlong::setPriority([ 'connection_id' => $this->connection->id ]);
         return true;

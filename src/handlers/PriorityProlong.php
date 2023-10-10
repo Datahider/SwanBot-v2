@@ -10,6 +10,7 @@ use losthost\SwanBot\handlers\abst\ConnectionPriorityMessage;
 use TelegramBot\Api\Types\Message;
 use losthost\swanctlModel\Model;
 use losthost\BotView\BotView;
+use losthost\SwanBot\Sync;
 use losthost\telle\Bot;
 use losthost\telle\Env;
 /**
@@ -34,6 +35,8 @@ class PriorityProlong extends ConnectionPriorityMessage {
         $view->show(Env::$language_code, 'connection', 'connection-keyboard', [
             'connection' => $this->connection
         ]);
+        
+        Bot::runAt(date_create(), Sync::class);
         
         static::unsetPriority();
         return true;

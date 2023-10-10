@@ -5,6 +5,7 @@ use losthost\SwanBot\handlers\abst\ConnectionHandlerCallback;
 use TelegramBot\Api\Types\CallbackQuery;
 use losthost\swanctlModel\Model;
 use losthost\BotView\BotView;
+use losthost\SwanBot\Sync;
 use losthost\passg\Pass;
 use losthost\telle\Bot;
 use losthost\telle\Env;
@@ -33,7 +34,11 @@ class CallbackNewPass extends ConnectionHandlerCallback {
         }    
         
         $model->commit();
-        Bot::$api->answerCallbackQuery($callback_query->getId());
+        try {
+            Bot::$api->answerCallbackQuery($callback_query->getId());
+        } catch (\Exception $e) {}
+        
+        Bot::runAt(date_create(), Sync::class);
         
         return true;
     }

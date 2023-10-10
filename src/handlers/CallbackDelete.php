@@ -21,6 +21,9 @@ class CallbackDelete extends ConnectionHandlerCallback {
         $view->show(Env::$language_code, 'connection', 'confirm-delete-keyboard', ['connection' => $this->connection], $callback_query->getMessage()->getMessageId());
         Bot::$api->answerCallbackQuery($callback_query->getId());
         
+        try {
+            Bot::$api->answerCallbackQuery($callback_query->getId());
+        } catch (\Exception $e) {}
         return true;
     }
 }

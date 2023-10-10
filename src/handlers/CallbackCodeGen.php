@@ -39,7 +39,10 @@ class CallbackCodeGen extends AbstractHandlerCallback {
             $view = new BotView(Bot::$api, Env::$user->id);
             $view->show(Env::$language_code, 'codes', null, [ 'codes' => $codes]);
         }
-        Bot::$api->answerCallbackQuery($callback_query->getId());
+        
+        try {
+            Bot::$api->answerCallbackQuery($callback_query->getId());
+        } catch (\Exception $e) {}
         return true;
     }
 
